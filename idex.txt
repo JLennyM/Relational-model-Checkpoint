@@ -1,0 +1,17 @@
++-------------+      +-----------+      +-------------+
+|   Hotel     |      |   Type    |      |   Room      |
++-------------+      +-----------+      +-------------+
+| Hotel_Id    |<----1| Type_Id   |<----1| Room_Id     |
+| Hotel_Name  |      | Type_Name |      | Floor       |
++-------------+      +-----------+      | Type_Id (FK)|
+                                         +-------------+
+
++-------------+      +-------------+
+|  Category   |      |  Employee   |
++-------------+      +-------------+
+| Category_Id |1---->| Employee_Id |
+| Category_Name|     | Employee_Name|
+| Price       |     | Employee_Speciality|
+| Beds_Numbers|     | Hotel_Id (FK)|
++-------------+      | Supervisor_Id (FK)|
+                     +-------------+
