@@ -1,0 +1,30 @@
++-------------+       +-----------+      +-------------+         +-------------+
+|   Hotel     |       |   Type    |      |    Room     |         |   Category  |
++-------------+       +-----------+      +-------------+         +-------------+
+| Hotel_Id    |<----1 | Type_Id   |<----1| Room_Id     |  N---->1| Category_Id |
+| Hotel_Name  |       | Type_Name |      | Floor       |         | Category_Name|
++-------------+       | Hotel_Id  |      | Hotel_Id (FK)|         | Price       |
+                      +-----------+      +-------------+         | Beds_Numbers|
+                                                                +-------------+
+
+                       N
+                       |
+                       | categorized
+                       |
+                       1
++---------------------+
+|   Room_Category     |
++---------------------+
+| Room_Id (PK, FK)    |
+| Category_Id (PK, FK)|
++---------------------+
+
++-------------+       +-------------+
+|  Employee   |       | Manager      |
++-------------+       +-------------+
+| Employee_Id |<----N | Manager_Id   |
+| Employee_Name|      | Manager_Name |
+| Employee_Speciality| | Hotel_Id (FK)|
+| Hotel_Id (FK)|      +-------------+
+| Manager_Id (FK)| 
++-------------+
